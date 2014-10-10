@@ -16,14 +16,20 @@ source $HOME/.zaliases
 
 # Cucumber Colors
 export CUCUMBER_COLORS=comment=yellow
+export CUCUMBER_FORMAT=pretty
 
 # Fred Wu's GC settings
 export RUBY_GC_MALLOC_LIMIT=90000000
 export RUBY_GC_HEAP_FREE_SLOTS=200000
 
+# For commandt
+# see http://stackoverflow.com/questions/8616843/ctrl-s-is-not-working-as-a-horizontal-split-in-vim-when-using-commandt
+stty -ixon -ixoff
+
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-# RVM
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# direnv see https://github.com/zimbatm/direnv
+eval "$(direnv hook $0)"
 
+# RVM must be last!!!
+# so its moved to zlogin
