@@ -21,7 +21,7 @@ function prompt_diabolo_pwd {
 }
 
 function ruby_inf {
-  _rb_prompt=`~/.rvm/bin/rvm-prompt v p g`
+  _rb_prompt=`~/.rvm/bin/rvm-prompt s v p g`
 }
 
 function prompt_diabolo_precmd {
