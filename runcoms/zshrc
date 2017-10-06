@@ -17,6 +17,7 @@ source $HOME/.zaliases
 # Cucumber Colors
 export CUCUMBER_COLORS=comment=yellow
 export CUCUMBER_FORMAT=pretty
+export CUCUMBER_JS_DRIVER=marionette
 
 # Fred Wu's GC settings
 export RUBY_GC_MALLOC_LIMIT=90000000
@@ -27,9 +28,6 @@ export RUBY_GC_HEAP_FREE_SLOTS=200000
 stty -ixon -ixoff
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-
-# direnv see https://github.com/zimbatm/direnv
-eval "$(direnv hook $0)"
 
 # RVM must be last!!!
 # so its moved to zlogin
